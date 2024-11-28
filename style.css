@@ -1,0 +1,734 @@
+/* General Styles */
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Keeps the link color consistent with the text */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 390px;
+    margin: auto;
+    background-color: #f6f4f4;
+    min-height: 100vh;
+}
+
+.ellipse {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: -150px;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    z-index: 0;
+}
+.ellipse1 {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 100px;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    z-index: 0;
+}
+
+/* Header */
+.EcoMetrics {
+    background-color: #228B22; 
+    color: white;
+    font-size: 22px; 
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px; /* Rounded corners */
+    width: 160; /* Auto-fit to content size */
+    height: 40px; /* Fixed: Missing semicolon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 4px;
+    margin-left: 20px;
+    align-self: flex-start; /* Align to the start (left) of the container */
+    
+}
+
+
+/* Welcome Banner */
+.welcome-banner {
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+    position: absolute;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.welcome-vector {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Metrics Section */
+.metrics-title {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center; /* Centers the text horizontally */
+    margin-left: auto;  /* Ensures it adjusts correctly */
+    margin-right: auto; /* Centers the block if needed */
+    
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 10px;
+}
+
+.metric-card {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+    border-top: 7px solid #228B22; /* Adds a green border at the top */
+
+}
+
+.metric-header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.metric-icon {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.metric-value {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.metric-unit {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 390px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Align icon and text vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-icon {
+    font-size: 15px;
+}
+
+
+/* Notifications Card */
+.notifications-card {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.notification-count {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.notification-text {
+    font-size: 18px;
+    color: white;
+}
+
+/* Notification List */
+.notification-list {
+    margin-top: 15px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.notification-label {
+    color: black;
+}
+
+.notification-time {
+    color: gray;
+}
+
+
+/* Profile Card */
+.profile-card {
+    margin-top: 20px;
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    width: 90%;
+    margin-top: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.profile-icon {
+    width: 50%;
+    height: 50%;
+}
+
+.nickname {
+    font-weight: bold;
+    font-size: 29px;
+    color: #fff;
+    margin-top: 7px;
+    position: relative;
+}
+
+.edit-icon {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.vector5 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    bottom: 0;
+}
+.vector6 {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.spongebob-vector {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 90px;
+}
+
+
+/* Options List */
+.options-list {
+    margin-top: 20px;
+    width: 90%;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.option-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.arrow {
+    font-size: 1.2em;
+    color: gray;
+}
+
+/* Humidity Banner */
+.humidity-banner {
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.humidity-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    z-index: 2;
+}
+
+/* Humidity Card */
+.humidity-card {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    z-index: 1;
+}
+
+.humidity-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    
+}
+
+.humidity-value {
+    font-size: 96px;
+    font-weight: bold;
+    color: #000;
+}
+
+.percent-symbol {
+    font-size: 0.5em;
+    vertical-align: top;
+}
+
+.humidity-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: -5px;
+    text-align: justify;
+    padding: 16px;
+}
+
+/* Statistics Button */
+.statistics-button {
+    background: linear-gradient(90deg, #228b22, #88da88);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    width: auto; /* Automatically adjust the width to fit the content */
+    max-width: 150px; /* Optional: Set a maximum width if needed */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ensure content stays centered */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.statistics-icon {
+    font-size: 2em;
+}
+
+.statistics-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+
+/* Temperature Banner */
+.temperature-banner {
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.temperature-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    z-index: 2;
+}
+
+/* Temperature Card */
+.temperature-card {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    z-index: 1;
+}
+
+.temperature-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.temperature-value {
+    font-size: 96px;
+    font-weight: bold;
+    color: #000;
+}
+
+.degree-symbol {
+    font-size: 0.5em;
+    vertical-align: top;
+}
+
+.temperature-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+    padding: 16px;
+}
+
+/* Sound Detection Banner */
+.sound-banner {
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sound-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #000;
+    z-index: 2;
+}
+
+/* Sound Detection Card */
+.sound-card {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    z-index: 1;
+}
+
+.sound-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sound-value {
+    font-size: 96px;
+    font-weight: bold;
+    color: #000;
+}
+
+.unit-symbol {
+    font-size: 24px;
+    vertical-align: top;
+}
+
+.sound-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+    padding: 16px;
+}
+
+
+/* About Us Section */
+.about-us-card {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.about-us-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.about-us-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    padding: 16px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 60px;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.queensLogo {
+    width: 100%; /* Adjusts the image to fill the width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 190px; /* Optional: Limits the maximum width */
+    display: block; /* Ensures the image is treated as a block-level element */
+}
+.footer-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #990000;
+    text-align: center;
+}
+
+.sensor-info-card {
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.sensor-info-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: center;
+}
+
+.sensor-info-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    padding: 16px;
+    
+}
+
+.tvoc-banner {
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tvoc-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    z-index: 2;
+    text-align: center;
+}
+
+/* TVOC Card */
+.tvoc-card {
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    z-index: 1;
+}
+
+.tvoc-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.tvoc-value {
+    font-size: 96px;
+    font-weight: bold;
+    color: #000;
+}
+
+.tvoc-unit {
+    font-size: 24px;
+    vertical-align: top;
+}
+
+.tvoc-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+    padding: 16px;
+}
+
+/* CO2 Banner */
+.co2-banner {
+    position: relative;
+    background: linear-gradient(90deg, #228b22, #88da88);
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.co2-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    z-index: 2;
+}
+
+/* CO2 Card */
+.co2-card {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    z-index: 1;
+}
+
+.co2-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.co2-value {
+    font-size: 96px;
+    font-weight: bold;
+    color: #000;
+}
+
+.co2-unit {
+    font-size: 24px;
+    vertical-align: top;
+}
+
+.co2-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+    padding: 16px;
+}
