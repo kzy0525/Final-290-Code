@@ -17,7 +17,7 @@ a {
     align-items: center;
     width: 390px;
     margin: auto;
-    background-color: #f6f4f4;
+    background-color: #d9d9d9;
     min-height: 100vh;
 }
 
@@ -42,12 +42,12 @@ a {
 
 /* Header */
 .EcoMetrics {
-    background-color: #228B22; 
+    background: linear-gradient(90deg, #228b22, #88da88);
     color: white;
     font-size: 22px; 
     font-weight: bold;
     text-align: center;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border-radius: 10px; /* Rounded corners */
     width: 160; /* Auto-fit to content size */
     height: 40px; /* Fixed: Missing semicolon */
@@ -188,16 +188,17 @@ a {
     flex-direction: column;
     align-items: center;
     font-weight: bold;
+    font-size: 40px;
 }
 
 .notification-count {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     color: white;
 }
 
 .notification-text {
-    font-size: 18px;
+    font-size: 40px;
     color: white;
 }
 
@@ -208,6 +209,11 @@ a {
     display: flex;
     flex-direction: column;
     z-index: 1;
+    
+}
+.notification-list {
+    max-height: 400px; /* Adjust to fit your design */
+    overflow-y: auto; /* Enable scrolling if needed */
 }
 
 .notification-item {
