@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMetrics - Humidity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <h1 class="EcoMetrics">Atmo</h1>
+        <img src="images/Ellipse34.png" alt="Banner Decoration" class="ellipse" />
+        <img src="images/Ellipse34.png" alt="Banner Decoration" class="ellipse1" />
+
+        <!-- Humidity Banner -->
+        <div class="humidity-banner">
+            <span class="humidity-title">Humidity</span>
+            <img src="images/Vector4.png" alt="Banner Decoration" class="welcome-vector" />
+        </div>
+
+        <!-- Humidity Card -->
+        <div class="humidity-card">
+            <h2 class="humidity-label">Today’s Humidity is:</h2>
+            <div class="humidity-value">
+                <span id="humidity">--</span><span class="percent-symbol">%</span>
+            </div>
+            <p class="humidity-description">
+                A humidity range of 30-60% is ideal for camping, providing comfortable
+                conditions for outdoor activities. This range minimizes the stickiness
+                of high humidity while preventing overly dry air. It ensures a
+                pleasant environment for hiking, sleeping, and enjoying nature. If
+                this drops below 30% or over 90% please be cautious. Check the other
+                metrics as well. Enjoy!
+            </p>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span>Notifications</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript to Fetch and Update Humidity Value -->
+    <script>
+        async function fetchHumidityData() {
+            try {
+                // Fetch the data from the Node.js server
+                const response = await fetch('http://localhost:5500/data'); // Replace with your server's address
+                const data = await response.json();
+
+                // Update the Humidity value dynamically
+                document.getElementById('humidity').textContent = data.humidity || '--';
+            } catch (error) {
+                console.error('Error fetching humidity data:', error);
+            }
+        }
+
+        // Fetch humidity data every second
+        setInterval(fetchHumidityData, 1000);
+    </script>
+</body>
+</html>
