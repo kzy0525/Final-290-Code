@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMetrics - TVOC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <h1 class="EcoMetrics">Atmo</h1>
+
+        <!-- TVOC Banner -->
+        <div class="tvoc-banner">
+            <span class="tvoc-title">Total Volatile Organic Compound</span>
+            <img src="images/Vector4.png" alt="Banner Decoration" class="welcome-vector" />
+        </div>
+
+        <!-- TVOC Card -->
+        <div class="tvoc-card">
+            <h2 class="tvoc-label">Today’s TVOC Level is:</h2>
+            <div class="tvoc-value">
+                <span id="tvoc">--</span><span class="tvoc-unit"> PPB</span>
+            </div>
+            <p class="tvoc-description">
+                A safe TVOC level is below 500 ppb, ensuring good air quality. Levels between 500-1000 ppb may cause mild irritation for sensitive individuals, while levels above 1000 ppb may lead to headaches, dizziness, and other health issues. Check the other metrics as well. Stay safe!
+            </p>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span>Notifications</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- JavaScript to Fetch and Update TVOC Value -->
+    <script>
+        async function fetchTVOCData() {
+            try {
+                // Fetch the data from the Node.js server
+                const response = await fetch('http://localhost:5500/data'); // Replace with your server's address
+                const data = await response.json();
+
+                // Update the TVOC value dynamically
+                document.getElementById('tvoc').textContent = data.tvoc || '--';
+            } catch (error) {
+                console.error('Error fetching TVOC data:', error);
+            }
+        }
+
+        // Fetch TVOC data every second
+        setInterval(fetchTVOCData, 1000);
+    </script>
+</body>
+</html>
